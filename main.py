@@ -8,6 +8,7 @@ from app.routes.health_routes import health_router
 load_dotenv()
 app = FastAPI()
 
+print(os.getenv("ALLOWED_HOSTS", "").split(","))
 app.add_middleware(
     CORSMiddleware,
     allow_origins=os.getenv("ALLOWED_HOSTS", "").split(","),

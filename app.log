@@ -43,3 +43,5 @@
 2025-02-02 19:14:03,404 - ERROR - Client error: Internal server error while extracting text from PDF.
 2025-02-02 19:14:33,487 - ERROR - Unexpected error extracting text from PDF: document closed
 2025-02-02 19:14:33,487 - ERROR - Client error: Internal server error while extracting text from PDF.
+2025-02-02 22:11:35,012 - INFO - ['']
+2025-02-02 22:11:49,399 - INFO - ['']
