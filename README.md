@@ -67,8 +67,14 @@ dms_backend/                         # Root directory
 ```
  5️⃣ Start the Application
 ```
-# $ uvicorn app.main:app --reload
+Server:
+# $ bash start.sh
+
+Developement:
+# $ bash dev.sh
+
 ```
+
 
 6️⃣ Access the API Health:
 ```
