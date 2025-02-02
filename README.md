@@ -7,39 +7,33 @@ and document management.
 # 📌 Project Structure
 ```
 dms_backend/                         # Root directory
-│── app/                              # Main application directory
-│   ├── api/                          # API routes
-│   │   ├── endpoints/                # Route definitions
-│   │   │   ├── documents.py          # Routes for document management
-│   │   │   ├── auth.py               # Routes for authentication
-│   │   │   ├── __init__.py           # Python package file
-│   │   ├── __init__.py               # API package initializer
-│   ├── core/                         # Core configurations
-│   │   ├── config.py                 # App settings
-│   │   ├── database.py               # Database connection
+│── app/                             # Main application directory
+│   ├── api/                         # API routes
+│   │   ├── routes/                  # Route definitions
+│   │   │   ├── pdf_routes.py        # PDF-related routes
+│   │   │   ├── health_routes.py     # Health check route
+│   │   │   ├── __init__.py          # Python package file
+│   │   ├── __init__.py              # API package initializer
+│   ├── services/                    # Business logic layer
+│   │   ├── document_service.py      # Document service logic
+│   │   ├── auth_service.py          # Authentication service logic
+│   │   ├── pdf_service.py           # PDF processing logic
 │   │   ├── __init__.py
-│   ├── models/                       # ORM Models (SQLAlchemy)
-│   │   ├── document.py               # Document model
-│   │   ├── user.py                   # User model
+│   ├── controllers/                 # API controllers (Handles request processing)
+│   │   ├── document_controller.py   # Document controller logic
+│   │   ├── auth_controller.py       # Authentication controller
+│   │   ├── pdf_controller.py        # PDF controller logic
 │   │   ├── __init__.py
-│   ├── schemas/                      # Pydantic Schemas (Data validation)
-│   │   ├── document.py               # Document schema
-│   │   ├── user.py                   # User schema
+│   ├── utils/                       # Utility functions
+│   │   ├── logger.py                # Logger configuration
+│   │   ├── constants.py             # Project-wide constants
 │   │   ├── __init__.py
-│   ├── services/                     # Business logic layer
-│   │   ├── document_service.py       # Document service logic
-│   │   ├── auth_service.py           # Authentication service logic
-│   │   ├── __init__.py
-│   ├── dependencies/                 # Dependency injection
-│   │   ├── database.py               # Database session dependency
-│   │   ├── auth.py                   # Authentication dependency
-│   │   ├── __init__.py
-│   ├── main.py                       # FastAPI entry point
+│   ├── main.py                      # FastAPI entry point
 │   ├── __init__.py
-│── .env                              # Environment variables (ignored in Git)
-│── requirements.txt                   # Project dependencies
-│── README.md                         # Project documentation
-│── .gitignore                        # Ignore unnecessary files (venv, .env, __pycache__)
+│── .env                             # Environment variables (ignored in Git)
+│── requirements.txt                 # Project dependencies
+│── README.md                        # Project documentation
+│── .gitignore                       # Ignore unnecessary files (venv, .env, __pycache__)
 ```
 
 # 🚀 Getting Started
