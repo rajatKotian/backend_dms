@@ -60,7 +60,16 @@ async def extract_text_from_pdf(file):
 
         logger.error(f"Unexpected error extracting text from PDF: {str(e)}")
         raise HTTPException(status_code=500, detail=ERROR_EXTRACTING_TEXT)
-    
+    finally:
+        # Ensure temporary PDF file is deleted
+        try:
+            if os.path.exists(TEMP_PDF_PATH):  # Check if file exists before deletion
+                os.remove(TEMP_PDF_PATH)
+                logger.info(f"Temporary file {TEMP_PDF_PATH} deleted successfully.")
+            else:
+                logger.warning(f"Temporary file {TEMP_PDF_PATH} not found, skipping deletion.")
+        except Exception as e:
+            logger.error(f"Error while deleting temporary file {TEMP_PDF_PATH}: {str(e)}")
 
 def format_text(text):
     """
@@ -102,10 +111,7 @@ def format_text(text):
     except HTTPException as e:
         logger.error(f"Client error: {str(e.detail)}")
         raise
-    
+
     except Exception as e:
         logger.error(f"Unexpected error formatting text: {str(e)}")
         raise HTTPException(status_code=500, detail=ERROR_FORMATTING_TEXT)
-    finally:
-        if os.path.exists(TEMP_PDF_PATH):
-            os.remove(TEMP_PDF_PATH)
