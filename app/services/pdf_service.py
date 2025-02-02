@@ -106,3 +106,6 @@ def format_text(text):
     except Exception as e:
         logger.error(f"Unexpected error formatting text: {str(e)}")
         raise HTTPException(status_code=500, detail=ERROR_FORMATTING_TEXT)
+    finally:
+        if os.path.exists(TEMP_PDF_PATH):
+            os.remove(TEMP_PDF_PATH)
