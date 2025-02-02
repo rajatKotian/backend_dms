@@ -28,8 +28,8 @@ dms_backend/                         # Root directory
 │   │   ├── logger.py                # Logger configuration
 │   │   ├── constants.py             # Project-wide constants
 │   │   ├── __init__.py
-│   ├── main.py                      # FastAPI entry point
-│   ├── __init__.py
+├── main.py                      # FastAPI entry point
+├── __init__.py
 │── .env                             # Environment variables (ignored in Git)
 │── requirements.txt                 # Project dependencies
 │── README.md                        # Project documentation
