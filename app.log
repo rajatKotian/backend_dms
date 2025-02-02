@@ -33,3 +33,13 @@
 2025-02-02 19:05:26,282 - WARNING - Temporary file temp.pdf not found, skipping deletion.
 2025-02-02 19:05:27,058 - INFO - False
 2025-02-02 19:05:27,058 - WARNING - Temporary file temp.pdf not found, skipping deletion.
+2025-02-02 19:10:35,141 - ERROR - Unexpected error extracting text from PDF: name 'file_path' is not defined
+2025-02-02 19:10:35,141 - ERROR - Client error: Internal server error while extracting text from PDF.
+2025-02-02 19:13:49,995 - ERROR - Unexpected error extracting text from PDF: cannot access local variable 'doc' where it is not associated with a value
+2025-02-02 19:13:49,995 - ERROR - Client error: Internal server error while extracting text from PDF.
+2025-02-02 19:13:50,871 - ERROR - Unexpected error extracting text from PDF: cannot access local variable 'doc' where it is not associated with a value
+2025-02-02 19:13:50,871 - ERROR - Client error: Internal server error while extracting text from PDF.
+2025-02-02 19:14:03,403 - ERROR - Unexpected error extracting text from PDF: cannot access local variable 'doc' where it is not associated with a value
+2025-02-02 19:14:03,404 - ERROR - Client error: Internal server error while extracting text from PDF.
+2025-02-02 19:14:33,487 - ERROR - Unexpected error extracting text from PDF: document closed
+2025-02-02 19:14:33,487 - ERROR - Client error: Internal server error while extracting text from PDF.

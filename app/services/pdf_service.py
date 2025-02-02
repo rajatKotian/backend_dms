@@ -46,10 +46,7 @@ async def extract_text_from_pdf(file):
         with open(OUTPUT_TEXT_PATH, "w", encoding="utf-8") as f:
             f.write(structured_text)
 
-
-        os.remove(TEMP_PDF_PATH)
         doc.close()
-
         return structured_text
 
     except HTTPException as e:
@@ -62,6 +59,15 @@ async def extract_text_from_pdf(file):
         logger.error(f"Unexpected error extracting text from PDF: {str(e)}")
         raise HTTPException(status_code=500, detail=ERROR_EXTRACTING_TEXT)
 
+    finally:
+        try:
+            os.remove(TEMP_PDF_PATH)
+            os.remove(OUTPUT_TEXT_PATH)
+            print("Temporary file deleted successfully.")
+        except PermissionError:
+            print("Permission denied: The file may be open in another program.")
+        except Exception as e:
+            print(f"Unexpected error while deleting file: {e}")
 
 def format_text(text):
     """
