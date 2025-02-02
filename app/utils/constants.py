@@ -1,8 +1,3 @@
-ALLOWED_ORIGINS = [
-    "http://localhost",
-    "http://localhost:3000",
-    "https://example.com",
-]
 
 TEMP_PDF_PATH = "temp.pdf"
 

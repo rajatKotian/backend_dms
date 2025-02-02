@@ -31,6 +31,7 @@ pydot==3.0.4
 PyMuPDF==1.25.2
 pyparsing==3.2.1
 python-dateutil==2.9.0.post0
+python-dotenv==1.0.1
 python-multipart==0.0.20
 pytz==2025.1
 pyxnat==1.6.2
