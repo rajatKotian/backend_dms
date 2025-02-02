@@ -24,3 +24,12 @@
 2025-02-02 19:00:36,308 - ERROR - Unexpected error extracting text from PDF: [Errno 2] No such file or directory: 'temp.pdf'
 2025-02-02 19:00:36,309 - ERROR - Client error: Internal server error while extracting text from PDF.
 2025-02-02 19:01:34,390 - WARNING - Temporary file temp.pdf not found, skipping deletion.
+2025-02-02 19:02:53,162 - WARNING - Temporary file temp.pdf not found, skipping deletion.
+2025-02-02 19:04:31,205 - INFO - False
+2025-02-02 19:04:31,206 - WARNING - Temporary file temp.pdf not found, skipping deletion.
+2025-02-02 19:04:34,996 - INFO - False
+2025-02-02 19:04:34,997 - WARNING - Temporary file temp.pdf not found, skipping deletion.
+2025-02-02 19:05:26,282 - INFO - False
+2025-02-02 19:05:26,282 - WARNING - Temporary file temp.pdf not found, skipping deletion.
+2025-02-02 19:05:27,058 - INFO - False
+2025-02-02 19:05:27,058 - WARNING - Temporary file temp.pdf not found, skipping deletion.

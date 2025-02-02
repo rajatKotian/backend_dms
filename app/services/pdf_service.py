@@ -48,6 +48,7 @@ async def extract_text_from_pdf(file):
 
 
         os.remove(TEMP_PDF_PATH)
+        doc.close()
 
         return structured_text
 
@@ -60,16 +61,7 @@ async def extract_text_from_pdf(file):
 
         logger.error(f"Unexpected error extracting text from PDF: {str(e)}")
         raise HTTPException(status_code=500, detail=ERROR_EXTRACTING_TEXT)
-    finally:
-        # Ensure temporary PDF file is deleted
-        try:
-            if os.path.exists(TEMP_PDF_PATH):  # Check if file exists before deletion
-                os.remove(TEMP_PDF_PATH)
-                logger.info(f"Temporary file {TEMP_PDF_PATH} deleted successfully.")
-            else:
-                logger.warning(f"Temporary file {TEMP_PDF_PATH} not found, skipping deletion.")
-        except Exception as e:
-            logger.error(f"Error while deleting temporary file {TEMP_PDF_PATH}: {str(e)}")
+
 
 def format_text(text):
     """
