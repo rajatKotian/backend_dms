@@ -20,7 +20,7 @@ limiter = Limiter(key_func=get_remote_address, default_limits=["100/second"])
 app.state.limiter = limiter
 
 @app.exception_handler(RateLimitExceeded)
-async def rate_limit_exceeded_handler(request, exc: RateLimitExceeded):
+async def rate_limit_exceeded_handler(request, exc):
     return HTTPException(
         status_code=400, 
         detail=ERROR_RATE_LIMITER
