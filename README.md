@@ -38,12 +38,12 @@ dms_backend/                         # Root directory
 
 # 🚀 Getting Started
 
- 1️⃣ Clone the Repository
+1️⃣ Clone the Repository
 ```
 $ git clone https://github.com/yourusername/dms_backend.git
 $ cd dms_backend
 ```
- 2️⃣ Set Up a Virtual Environment
+2️⃣ Set Up a Virtual Environment
 ```
 $ python3 -m venv venv
 $ source venv/bin/activate  # On Linux/macOS
@@ -55,18 +55,17 @@ $ venv\Scripts\activate     # On Windows
 $ pip install -r requirements.txt
 ```
 
- 4️⃣ Set Up Environment Variables
+4️⃣ Set Up Environment Variables
 ```
 Create a `.env` file with and add the environment variables as needed
 ```
- 5️⃣ Start the Application
+5️⃣ Start the Application
 ```
 Server:
 $ bash start.sh
 
 Developement:
 $ bash dev.sh
-
 ```
 
 
